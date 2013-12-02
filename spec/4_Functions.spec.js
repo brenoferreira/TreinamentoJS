@@ -5,6 +5,12 @@ describe("Functions", function(){
     expect(soma).toBe(4);
   });
 
+  it("mult", function(){
+    var mult = Functions.mult(3, 3);
+
+    expect(mult).toBe(9);
+  });
+
   it("soma call", function(){
     var soma = Functions.soma.call(this, 2, 2);
 

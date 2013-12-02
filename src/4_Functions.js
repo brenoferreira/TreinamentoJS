@@ -7,6 +7,10 @@ Functions = {
     return this.soma(x, -y);
   },
 
+  mult: function(){
+    return arguments[0] * arguments[1];
+  },
+
   fatorial: function(n){
     if(n === 0) return 1;
     else return n * this.fatorial(n -1);
