@@ -22,4 +22,28 @@ describe("Arrays", function(){
 
     expect(soma).toEqual(120);
   });
+
+  it("all", function(){
+    var mairQueZero = ArrayOps.all(function(n) { return n > 0}, [1, 2, 3]);
+
+    expect(mairQueZero).toBeTruthy();
+  });
+
+  it("all falso", function(){
+    var mairQueZero = ArrayOps.all(function(n) { return n > 2}, [1, 2, 3]);
+
+    expect(mairQueZero).toBeFalsy();
+  });
+
+  it("any", function(){
+    var mairQueZero = ArrayOps.any(function(n) { return n > 2}, [1, 2, 3]);
+
+    expect(mairQueZero).toBeTruthy();
+  });
+
+  it("any falso", function(){
+    var mairQueZero = ArrayOps.any(function(n) { return n > 3}, [1, 2, 3]);
+
+    expect(mairQueZero).toBeFalsy();
+  });
 });
