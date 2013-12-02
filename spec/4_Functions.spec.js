@@ -22,7 +22,6 @@ describe("Functions", function(){
 
     expect(soma).toBe(4);
   });
-
   it("argumento this com erro", function(){
     try{
       var sub = Functions.sub.apply(this, [2, 2]);
@@ -68,4 +67,20 @@ describe("Functions", function(){
 
     expect(ok).toBeUndefined();
   });
+
+  it("div", function(){
+    var div = Functions.div(6, 2)
+
+    expect(div).toBe(3);
+  });
+
+  it("div por zero", function(){
+    try{
+      var div = Functions.div(6, 0);
+      expect(false).tobe(true);
+    } catch(err){
+      expect(err).toBe("divide by zero");
+    }
+  });
+
 });

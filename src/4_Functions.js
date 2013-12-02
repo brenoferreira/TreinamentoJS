@@ -11,6 +11,11 @@ Functions = {
     return arguments[0] * arguments[1];
   },
 
+  div: function(x, y){
+    if(y === 0) throw "divide by zero";
+    else return x / y;
+  },
+
   fatorial: function(n){
     if(n === 0) return 1;
     else return n * this.fatorial(n -1);
