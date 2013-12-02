@@ -63,5 +63,9 @@ describe("Equality", function () {
       expect([1] === "1").toBeFalsy();
       expect([] === '').toBeFalsy();
     });
+
+    it("NaN", function(){
+      expect(NaN === NaN).toBeFalsy();
+    });
   });
 })
