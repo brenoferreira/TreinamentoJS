@@ -20,19 +20,11 @@
 
 * String, String Methods
 
-* Number
-
 * Array
 
 * Regular Expression
 
 * Date
-
-* eval and JSON
-
-* isNaN and parseFloat
-
-* Math
 
 #jQuery
 
