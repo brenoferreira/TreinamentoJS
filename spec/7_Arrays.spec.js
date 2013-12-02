@@ -10,4 +10,16 @@ describe("Arrays", function(){
 
     expect(mairQueUm).toEqual([2, 3]);
   });
+
+  it("reduce", function(){
+    var soma = ArrayOps.reduce(function(acc, n) { return acc + n}, [1, 2, 3], 0);
+
+    expect(soma).toEqual(6);
+  });
+
+  it("reduce mult", function(){
+    var soma = ArrayOps.reduce(function(acc, n) { return acc * n}, [1, 2, 3, 4, 5], 1);
+
+    expect(soma).toEqual(120);
+  });
 });

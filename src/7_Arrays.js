@@ -10,5 +10,10 @@ ArrayOps = {
 
   filter: function(f, array){
     return ArrayOps.map(function(n) { if (f(n)) return n; }, array);
+  },
+
+  reduce: function(f, array, initial){
+    if(array.length === 0) return initial;
+    else return ArrayOps.reduce(f, array.slice(1), f(initial, array[0]));
   }
 }
