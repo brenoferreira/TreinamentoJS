@@ -9,7 +9,9 @@ ArrayOps = {
   },
 
   filter: function(f, array){
-    return ArrayOps.map(function(n) { if (f(n)) return n; }, array);
+    return ArrayOps.map(function(n) { 
+      if (f(n)) return n; 
+    }, array);
   },
 
   reduce: function(f, array, initial){

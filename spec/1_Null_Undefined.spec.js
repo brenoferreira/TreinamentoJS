@@ -5,7 +5,13 @@ describe("Null_Undefined", function(){
       expect(res).toBeNull();
   });
 
-  it("retornaNull checagem manual", function(){
+  it("variavel null nao e undefined", function(){
+      var res = NullUndefined.retornaNull();
+
+      expect(res == undefined).toBeTruthy();
+  });  
+
+  it("retornaNull checagem == undefined manual", function(){
       var res = NullUndefined.retornaNull();
 
       expect(res === null).toBeTruthy();
@@ -33,5 +39,17 @@ describe("Null_Undefined", function(){
     var elementoInexistente = document.getElementById("elementoInexistente");
 
     expect(elementoInexistente).toBeNull();
+  });
+
+  it("declarar variavel", function(){
+    var x;
+
+    expect(x).toBeUndefined();
+  });
+
+  it("funcao retorna undefined", function(){
+    var resultado = NullUndefined.retornaJson();
+
+    expect(resultado).toBeUndefined();
   });
 });

@@ -15,6 +15,7 @@ describe("String", function(){
 
   it("indexOf", function(){
     expect(str.indexOf("hello")).toBe(0);
+    expect(str.indexOf("world")).toBe(6);
     expect(str.indexOf("hi")).toBe(-1);
   });
 
@@ -28,7 +29,7 @@ describe("String", function(){
 
   it("regex", function(){
     var regex = "[a-z0-9._%+-]+@(?:[a-z0-9-]+\.)+[a-z]{2,4}";
-    var email = "brenoferreira@lambda3.com.br";
+    var email = "breno.ferreira@lambda3.com.br";
     var resultado = email.match(regex);
     expect(resultado[0]).toBe(email);
   });

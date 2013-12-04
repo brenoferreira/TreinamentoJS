@@ -39,5 +39,5 @@ describe("Objects", function () {
     Voo.destino.horario = "10-13-2013 20:30";
 
     expect(Voo.destino.horario).toBe("10-13-2013 20:30");
-  })
+  });
 });

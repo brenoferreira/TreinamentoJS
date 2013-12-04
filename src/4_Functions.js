@@ -7,7 +7,7 @@ Functions = {
     return this.soma(x, -y);
   },
 
-  mult: function(){
+  mult: function(x, y){
     return arguments[0] * arguments[1];
   },
 
@@ -28,7 +28,7 @@ Functions = {
   }
 }
 
-closure = function(x) {
+classe = function(x) {
   this.funcaoPublica = function(){
     return funcaoPrivada();
   };

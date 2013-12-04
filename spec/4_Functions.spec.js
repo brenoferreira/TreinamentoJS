@@ -22,6 +22,7 @@ describe("Functions", function(){
 
     expect(soma).toBe(4);
   });
+
   it("argumento this com erro", function(){
     try{
       var sub = Functions.sub.apply(this, [2, 2]);
@@ -44,6 +45,12 @@ describe("Functions", function(){
     expect(sub).toBe(4);
   });
 
+  it("2 - 2 e 0", function(){
+    var sub = Functions.sub(2, 2);
+
+    expect(sub).toBe(0);
+  });
+
   it("fatorial", function(){
     var fatorial = Functions.fatorial(5);
 
@@ -51,19 +58,19 @@ describe("Functions", function(){
   });
 
   it("somaCurried", function(){
-    var soma = Functions.somaCurried(2)(2);
+    var inc = Functions.somaCurried(1);    
 
-    expect(soma).toBe(4);
+    expect(inc(3)).toBe(4);
   });
 
   it("funcao publica", function(){
-    var ok = new closure(10).funcaoPublica();
+    var ok = new classe(10).funcaoPublica();
 
     expect(ok).toBe(10);
   });
 
   it("funcao privada", function(){
-    var ok = new closure().funcaoPrivada
+    var ok = new classe(10).funcaoPrivada
 
     expect(ok).toBeUndefined();
   });
