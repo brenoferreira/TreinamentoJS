@@ -3,7 +3,7 @@ ArrayOps = {
     if(array.length == 0) return [];
     else{
       var res = f(array[0]);
-      if(res === void 0) return ArrayOps.map(f, array.slice(1));
+      if(res == null) return ArrayOps.map(f, array.slice(1));
       else return [res].concat(ArrayOps.map(f, array.slice(1)));
     }
   },
